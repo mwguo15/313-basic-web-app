@@ -30,7 +30,7 @@ export default function QueryProcessor(query: string): string {
   if (query.includes("plus")) {
     let numbers = query.match(/[0-9]+/g);
     let arr = numbers!;
-    let sum = arr[0] + arr[1];
+    let sum = Number(arr[0]) + Number(arr[1]);
     return sum.toString();
   }
 
